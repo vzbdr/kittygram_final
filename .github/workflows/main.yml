@@ -101,6 +101,4 @@ jobs:
         with:
           context: ./frontend/
           push: true
-          tags: dencapone/kittygram_frontend:latest
-     
-    
+          tags: vzbdr/kittygram_frontend:latest
