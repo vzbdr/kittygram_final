@@ -8,19 +8,19 @@ volumes:
 services:
   db:
     image: postgres:13
-    env_file: .env
+    env_file: .env.example
     volumes:
       - pg_data_kitty:/var/lib/postgresql/data
   backend:
     image: vzbdr/kittygram_backend
-    env_file: .env
+    env_file: .env.example
     volumes:
       - static:/backend_static
       - media:/app/media
   frontend:
     image: vzbdr/kittygram_frontend  
     command: cp -r /app/build/. /static/
-    env_file: .env
+    env_file: .env.example
     volumes:
       - static:/static
   gateway:
