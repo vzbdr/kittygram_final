@@ -1,4 +1,4 @@
-name: Main Taski workflow
+name: Main Kittygram workflow
 
 on:
   push:
@@ -121,7 +121,7 @@ jobs:
         with:
           context: ./nginx/
           push: true
-          tags: dencapone/kittygram_gateway:latest
+          tags: vzbdr/kittygram_gateway:latest
 
   deploy:
     runs-on: ubuntu-latest
