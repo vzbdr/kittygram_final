@@ -29,7 +29,7 @@ services:
     depends_on:
       - backend
     ports:
-      - ${NGINX_PORT}:${HOST_PORT}
+      - 9000:80
     volumes:
       - static:/static
       - media:/app/media
