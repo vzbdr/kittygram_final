@@ -24,11 +24,11 @@ services:
       - static:/static
   gateway:
     build: ./nginx/
-    env_file: .env.example
-    depends_on:
-      - backend
+    env_file: .env
     ports:
       - 9000:80
+    depends_on:
+      - backend
     volumes:
       - static:/static
       - media:/app/media
