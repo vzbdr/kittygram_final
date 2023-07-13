@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip install -r requirements.txt --no-cache-dir
 
-CMD ["gunicorn", "--bind", "0.0.0.0:$${NGINX_PORT}", "kittygram_backend.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kittygram_backend.wsgi"]
