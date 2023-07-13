@@ -24,7 +24,7 @@ services:
       - static:/static
   gateway:
     build: ./nginx/
-    env_file: .env
+    env_file: .env.example
     ports:
       - 9000:80
     depends_on:
