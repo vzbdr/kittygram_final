@@ -25,6 +25,7 @@ services:
       - static:/static
   gateway:
     image: vzbdr/kittygram_gateway
+    env_file: .env
     depends_on:
       - backend
     ports:
