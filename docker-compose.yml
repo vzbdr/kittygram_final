@@ -26,7 +26,7 @@ services:
     build: ./nginx/
     env_file: .env.example
     ports:
-      - 9000:80
+      - ${NGINX_PORT}:${HOST_PORT}
     depends_on:
       - backend
     volumes:
